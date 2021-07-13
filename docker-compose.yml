@@ -1,0 +1,10 @@
+version: '3'
+services:
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./src:/src"
+      - "./screenshots:/screenshots"
+    command: "node /src/main.js"
